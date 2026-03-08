@@ -59,7 +59,7 @@ export default function Hero() {
           className="text-white/65 text-[17px] leading-relaxed max-w-xl mx-auto mb-7"
         >
           <span className="text-white/85 font-semibold">Mekala Transports</span> operates daily staff transportation services for factories, IT parks, and
-          corporations across Tamil Nadu, India — with 33+ years of reliability built into every route.
+          corporations across Tamil Nadu, India with 33+ years of reliability built into every route.
         </motion.p>
 
         <motion.div
