@@ -14,7 +14,7 @@ export default function Footer() {
             </h3>
             <p className="text-white/65 text-[15px] leading-relaxed mb-4">
               Tamil Nadu's trusted staff transportation partner since 1992.
-              Operating across six districts with 15,000+ KM daily coverage.
+              Operating across Tamil Nadu, India with 15,000+ KM daily coverage.
             </p>
             <div className="flex flex-col gap-1.5">
               <a href="tel:+919380000001" className="text-white/65 hover:text-[#C9A800] text-[15px] flex items-center gap-2 transition-colors"><Phone size={14} /> +91 93800 00001</a>
