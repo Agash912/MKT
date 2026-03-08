@@ -32,27 +32,27 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.4 }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5' : ''
+          scrolled ? 'bg-[#0a0a0a]/90 backdrop-blur-xl' : ''
         }`}
       >
-        <div className="max-w-[1100px] mx-auto flex items-center justify-between h-14 px-5">
+        <div className="max-w-[1100px] mx-auto relative flex items-center justify-between h-20 px-5">
           <a href="#home" onClick={(e) => { e.preventDefault(); go('#home'); }}>
             <img src="/assets/logo-mark.png" alt="MKT" className="h-11 w-auto" />
           </a>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((l) => (
               <a key={l.label} href={l.href} onClick={(e) => { e.preventDefault(); go(l.href); }}
-                className="text-white/40 text-[13px] font-medium hover:text-white transition-colors">{l.label}</a>
+                className="text-white/65 text-[15px] font-medium hover:text-white transition-colors">{l.label}</a>
             ))}
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+919380000001" className="text-white/40 hover:text-white text-[13px] font-medium flex items-center gap-1.5 transition-colors">
-              <Phone size={12} /> Call
+            <a href="tel:+919380000001" className="text-white/65 hover:text-white text-[15px] font-medium flex items-center gap-1.5 transition-colors">
+              <Phone size={14} /> Call
             </a>
             <a href="#quote" onClick={(e) => { e.preventDefault(); go('#quote'); }}
-              className="bg-[#C9A800] text-black text-[12px] font-semibold px-4 py-1.5 rounded hover:bg-[#d4b320] transition-colors">
+              className="bg-[#C9A800] text-black text-[14px] font-semibold px-4 py-1.5 rounded hover:bg-[#d4b320] transition-colors">
               Get Quote
             </a>
           </div>

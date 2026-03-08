@@ -21,22 +21,22 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <p className="text-[#C9A800] text-[11px] font-semibold tracking-[0.25em] uppercase mb-3">What We Do</p>
-          <h2 className="text-[1.65rem] sm:text-[1.9rem] font-extrabold leading-tight">
+          <p className="text-[#C9A800] text-[13px] font-semibold tracking-[0.25em] uppercase mb-3">What We Do</p>
+          <h2 className="text-[1.8rem] sm:text-[2.1rem] font-extrabold leading-tight">
             End-to-End Transport <span className="text-[#C9A800]">Solutions</span>
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-lg overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-lg overflow-hidden">
           {items.map((s, i) => {
             const Icon = s.icon;
             return (
               <motion.div key={s.title} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-30px' }} transition={{ duration: 0.3, delay: i * 0.03 }}
                 className="bg-[#0f0f0f] p-5 hover:bg-[#131313] transition-colors">
-                <Icon size={16} className="text-[#C9A800] mb-2.5" strokeWidth={1.8} />
-                <h3 className="text-white/85 text-[13px] font-semibold mb-1">{s.title}</h3>
-                <p className="text-white/25 text-[11px] leading-relaxed">{s.desc}</p>
+                <Icon size={18} className="text-[#C9A800] mb-2.5" strokeWidth={1.8} />
+                <h3 className="text-white/90 text-[15px] font-semibold mb-1">{s.title}</h3>
+                <p className="text-white/60 text-[13px] leading-relaxed">{s.desc}</p>
               </motion.div>
             );
           })}

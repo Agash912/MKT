@@ -6,19 +6,21 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-[#060606]">
       <div className="max-w-[1100px] mx-auto px-5 py-10">
-        <div className="grid grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left */}
           <div>
-            <img src="/assets/logo-mark.png" alt="MKT" className="h-12 w-auto mb-3" />
-            <p className="text-white/30 text-[13px] leading-relaxed mb-4">
+            <h3 className="text-[1.8rem] sm:text-[2.1rem] leading-tight mb-3" style={{ fontFamily: '"Playfair Display", serif', fontWeight: 500 }}>
+              <span className="text-[#C9A800]">Mekala Transports</span>
+            </h3>
+            <p className="text-white/65 text-[15px] leading-relaxed mb-4">
               Tamil Nadu's trusted staff transportation partner since 1992.
               Operating across six districts with 15,000+ KM daily coverage.
             </p>
             <div className="flex flex-col gap-1.5">
-              <a href="tel:+919380000001" className="text-white/40 hover:text-[#C9A800] text-[13px] flex items-center gap-2 transition-colors"><Phone size={12} /> +91 93800 00001</a>
-              <a href="tel:+919942333333" className="text-white/40 hover:text-[#C9A800] text-[13px] flex items-center gap-2 transition-colors"><Phone size={12} /> +91 99423 33333</a>
-              <a href="mailto:mekalatransports@gmail.com" className="text-white/40 hover:text-[#C9A800] text-[13px] flex items-center gap-2 transition-colors"><Mail size={12} /> mekalatransports@gmail.com</a>
-              <span className="text-white/25 text-[13px] flex items-center gap-2 mt-1"><MapPin size={12} /> Sriperumbudur – 602105, Tamil Nadu</span>
+              <a href="tel:+919380000001" className="text-white/65 hover:text-[#C9A800] text-[15px] flex items-center gap-2 transition-colors"><Phone size={14} /> +91 93800 00001</a>
+              <a href="tel:+919942333333" className="text-white/65 hover:text-[#C9A800] text-[15px] flex items-center gap-2 transition-colors"><Phone size={14} /> +91 99423 33333</a>
+              <a href="mailto:mekalatransports@gmail.com" className="text-white/65 hover:text-[#C9A800] text-[15px] flex items-center gap-2 transition-colors"><Mail size={14} /> mekalatransports@gmail.com</a>
+              <span className="text-white/60 text-[15px] flex items-center gap-2 mt-1"><MapPin size={14} /> Sriperumbudur – 602105, Tamil Nadu</span>
             </div>
           </div>
 
@@ -44,17 +46,17 @@ export default function Footer() {
                 ]},
               ].map((section, si, arr) => (
                 <div key={section.label} className={`px-4 py-3 ${si < arr.length - 1 ? 'border-b border-white/[0.04]' : ''}`}>
-                  <p className="text-white/25 text-[10px] font-semibold uppercase tracking-[0.12em] mb-1.5">{section.label}</p>
+                  <p className="text-white/55 text-[12px] font-semibold uppercase tracking-[0.12em] mb-1.5">{section.label}</p>
                   <div className="flex flex-wrap gap-x-4 gap-y-1">
                     {section.items.map((item) => (
                       item.href ? (
                         <a key={item.text} href={item.href}
                           onClick={item.href.startsWith('#') ? (e) => { e.preventDefault(); go(item.href); } : undefined}
-                          className={`text-[12px] transition-colors ${item.gold ? 'text-[#C9A800] font-medium' : 'text-white/35 hover:text-[#C9A800]'}`}>
+                          className={`text-[14px] transition-colors ${item.gold ? 'text-[#C9A800] font-medium' : 'text-white/65 hover:text-[#C9A800]'}`}>
                           {item.text}
                         </a>
                       ) : (
-                        <span key={item.text} className="text-white/25 text-[12px]">{item.text}</span>
+                        <span key={item.text} className="text-white/60 text-[14px]">{item.text}</span>
                       )
                     ))}
                   </div>
@@ -65,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center justify-between">
-          <p className="text-white/20 text-[11px]">© {new Date().getFullYear()} Mekala Transports · Established 1992</p>
+          <p className="text-white/55 text-[13px]">© {new Date().getFullYear()} Mekala Transports · Established 1992</p>
           <button onClick={() => go('#home')} className="text-white/20 hover:text-[#C9A800] transition-colors"><ArrowUp size={14} /></button>
         </div>
       </div>

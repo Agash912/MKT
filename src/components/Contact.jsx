@@ -11,13 +11,13 @@ export default function Contact() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-[#C9A800] text-[11px] font-semibold tracking-[0.25em] uppercase mb-3">Contact</p>
-          <h2 className="text-[1.65rem] sm:text-[1.9rem] font-extrabold leading-tight mb-6">
+          <p className="text-[#C9A800] text-[13px] font-semibold tracking-[0.25em] uppercase mb-3">Contact</p>
+          <h2 className="text-[1.8rem] sm:text-[2.1rem] font-extrabold leading-tight mb-6">
             Always<span className="text-[#C9A800]"> Reachable.</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left - details */}
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -35,14 +35,14 @@ export default function Contact() {
                 const Icon = c.icon;
                 return (
                   <div key={i} className={`grid grid-cols-[14px,1fr] gap-3 px-4 py-3 hover:bg-white/[0.02] transition-colors ${i < arr.length - 1 ? 'border-b border-white/[0.04]' : ''}`}>
-                    <Icon size={13} className="text-[#C9A800] mt-0.5" />
+                    <Icon size={15} className="text-[#C9A800] mt-0.5" />
                     <div className="leading-relaxed">
                       {c.href ? (
-                        <a href={c.href} className="text-white/60 text-[12px] font-medium hover:text-[#C9A800] transition-colors">{c.text}</a>
+                        <a href={c.href} className="text-white/80 text-[14px] font-medium hover:text-[#C9A800] transition-colors">{c.text}</a>
                       ) : (
-                        <p className="text-white/60 text-[12px] font-medium">{c.text}</p>
+                        <p className="text-white/80 text-[14px] font-medium">{c.text}</p>
                       )}
-                      {c.sub && <p className="text-white/25 text-[11px] mt-0.5">{c.sub}</p>}
+                      {c.sub && <p className="text-white/55 text-[13px] mt-0.5">{c.sub}</p>}
                     </div>
                   </div>
                 );

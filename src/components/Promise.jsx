@@ -13,18 +13,18 @@ export default function Promise() {
   return (
     <section id="promise" className="py-14 lg:py-20 bg-[#0f0f0f] border-t border-white/[0.04]">
       <div className="max-w-[1100px] mx-auto px-5">
-        <div className="grid grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-[#C9A800] text-[11px] font-semibold tracking-[0.25em] uppercase mb-3">Our Promise</p>
-            <h2 className="text-[1.65rem] sm:text-[1.9rem] font-extrabold leading-tight mb-3">
+            <p className="text-[#C9A800] text-[13px] font-semibold tracking-[0.25em] uppercase mb-3">Our Promise</p>
+            <h2 className="text-[1.8rem] sm:text-[2.1rem] font-extrabold leading-tight mb-3">
               What We Stand For.<span className="text-[#C9A800]"> Every Day.</span>
             </h2>
-            <p className="text-white/30 text-[13px] leading-relaxed">
+            <p className="text-white/65 text-[15px] leading-relaxed">
               These are not slogans. They are commitments we have kept through every challenge
               and milestone for over three decades.
             </p>
@@ -35,12 +35,12 @@ export default function Promise() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5, delay: 0.06 }}
-            className="grid grid-cols-2 gap-px bg-white/[0.04] rounded-lg overflow-hidden"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.04] rounded-lg overflow-hidden"
           >
             {items.map((p) => (
               <div key={p.title} className="bg-[#0f0f0f] p-4 hover:bg-[#131313] transition-colors">
-                <h3 className="text-white/85 text-[13px] font-semibold mb-1">{p.title}</h3>
-                <p className="text-white/25 text-[11px] leading-relaxed">{p.desc}</p>
+                <h3 className="text-white/90 text-[15px] font-semibold mb-1">{p.title}</h3>
+                <p className="text-white/60 text-[13px] leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </motion.div>
